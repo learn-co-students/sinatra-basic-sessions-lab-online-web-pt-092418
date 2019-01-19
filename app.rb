@@ -13,6 +13,6 @@ class App < Sinatra::Base
 
   post "/checkout" do
     session["item"] = "socks"
-    "The item is #{session["item"]}"
+    @session = session
   end
 end
